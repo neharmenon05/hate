@@ -11,10 +11,15 @@ class AuthManager {
 
     async init() {
         // Check for existing session
-        const user = await getCurrentUser();
-        if (user) {
-            await this.handleUserSession(user);
-        } else {
+        try {
+            const user = await getCurrentUser();
+            if (user) {
+                await this.handleUserSession(user);
+            } else {
+                this.showAuthForm();
+            }
+        } catch (error) {
+            console.error('Error getting current user:', error);
             this.showAuthForm();
         }
 
