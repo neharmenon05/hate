@@ -275,5 +275,3 @@ export class StudentDashboard {
         // Clean up any timers or listeners
     }
 }
-
-export { StudentDashboard };

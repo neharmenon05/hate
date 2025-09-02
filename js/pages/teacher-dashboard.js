@@ -403,5 +403,3 @@ export class TeacherDashboard {
         // Clean up any timers or listeners
     }
 }
-
-export { TeacherDashboard };
